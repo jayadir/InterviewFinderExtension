@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <style>
+        .container {
+            max-width: 800px;
+            min-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #f8f9fa;
+        }
+        .status{
+            display: flex;
+            justify-content: space-around;
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #343a40; /* Dark gray */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057; /* Gray */
+        }
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-image: linear-gradient(to right, #007bff, #6495ED);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .form-group button:hover {
+            background-image: linear-gradient(to right, #0056b3, #4169E1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>INTERVIEW FINDER</h2>
+        <div class="form-group">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date">
+        </div>
+        <div class="form-group">
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date">
+        </div>
+        <div class="form-group">
+            <label >Location</label>
+            <select class="form-group" id="location">
+                <option value="select">--SELECT--</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="button" id="start">Start Search</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="stop">Stop</button>
+        </div>
+        <div class="form-group status">
+            <p>Status</p>
+            <p>Running</p>
+            <p>Stopped</p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
